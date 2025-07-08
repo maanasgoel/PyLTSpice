@@ -18,9 +18,9 @@ This project is designed for engineers, students, and hobbyists who want to spee
 
 -   **Headless Simulation**: Run LTSpice simulations in the background without opening the GUI, perfect for quick calculations or automated test scripts.
 
--   **AI-Generated Plots**: Ask for plots of any node voltage (`V(node_name)`) or component current (`I(R1)`). The AI generates a plot and displays it directly in the chat.
+-   **Generates Plot Files**: Ask for plots of any node voltage (`V(node_name)`) or component current (`I(R1)`). The AI generates a `.png` image file and saves it in the session directory.
 
--   **Interactive Waveform Analysis**: Use the `view_results_in_ltspice` tool to open the LTspice waveform viewer with your simulation data pre-loaded. This allows you to use all of LTspice's powerful analysis tools, like cursors, FFTs, and measurements, on your results.
+-   **Manual Waveform Analysis**: For interactive analysis, you can manually open the generated `.raw` data file in the LTSpice waveform viewer to use its powerful tools like cursors, FFTs, and measurements.
 
 -   **Built-in Debugging**: If a simulation fails, you can ask the AI to read the log file and help you understand what went wrong.
 
@@ -68,15 +68,28 @@ Here is an example of the interactive workflow in action.
 > Please plot V(out) for me.
 
 **AI:**
-> Here is the plot for V(out):
+> 📈 Plot generated successfully!
+> - **File:** `plot_V(out).png`
+> - **Location:** `simulation_output/20250703_150000/`
 >
-> (The AI displays the generated PNG image of the V(out) waveform here.)
+> You can open this image file to view the plot of V(out). What would you like to do next?
 
 **You:**
 > Great. Now let me analyze the results myself in LTspice.
 
 **AI:**
-> 🚀 LTspice waveform viewer launched successfully! You can now use LTspice's tools to interactively plot and analyze any of the traces from your simulation.
+> ⚠️ **EXPERIMENTAL FEATURE - Known Issues**
+>
+> The automatic waveform viewer has compatibility problems with Wine on macOS. It often opens a blank window instead of showing the data.
+>
+> **📊 RECOMMENDED ALTERNATIVES:**
+> 1.  Use 'plot specific traces' to generate a PNG plot.
+> 2.  **Manually open LTspice and load the `.raw` file:**
+>     -   Go to `File > Open`
+>     -   Navigate to: `simulation_output/20250703_150000/`
+>     -   Select: `circuit.raw`
+>
+> The core simulation functionality works perfectly—only this specific viewer tool is problematic.
 
 ---
 
