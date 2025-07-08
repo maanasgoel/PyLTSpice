@@ -325,30 +325,8 @@ async def view_netlist_in_ltspice(netlist_path: str) -> dict:
         return {"status": "error", "message": str(e)}
 
 
-@mcp.tool()
-async def view_results_in_ltspice(raw_file_path: str, session_dir: str) -> dict:
-    """
-    [EXPERIMENTAL - MAY NOT WORK] Opens the LTspice waveform viewer with the specified .raw file.
-    
-    WARNING: This feature has known compatibility issues with Wine on macOS.
-    If the waveform viewer opens blank, please use one of these alternatives:
-    1. Use the plot_specific_traces tool to generate PNG plots
-    2. Manually open the .raw file: Open LTspice → File → Open → Browse to session_dir/circuit.raw
-    """
-    return {
-        "status": "warning", 
-        "message": (
-            "⚠️  EXPERIMENTAL FEATURE - Known Issues\n\n"
-            "The automatic waveform viewer has compatibility problems with Wine on macOS.\n"
-            "It often opens a blank window instead of showing the data.\n\n"
-            "📊 RECOMMENDED ALTERNATIVES:\n"
-            "1. Use 'plot specific traces' to generate PNG plots with matplotlib\n"
-            "2. Manually open LTspice and load the .raw file:\n"
-            f"   • File → Open → Navigate to: {session_dir}\n"
-            f"   • Select: circuit.raw\n\n"
-            "The core simulation functionality works perfectly - only this viewer feature is problematic."
-        )
-    }
+# NOTE: view_results_in_ltspice tool has been removed due to Wine compatibility issues.
+# Users should use the plot_specific_traces tool for visualization instead.
 
 
 # =============================================================================

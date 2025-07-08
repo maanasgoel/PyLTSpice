@@ -20,7 +20,7 @@ This project is designed for engineers, students, and hobbyists who want to spee
 
 -   **Generates Plot Files**: Ask for plots of any node voltage (`V(node_name)`) or component current (`I(R1)`). The AI generates a `.png` image file and saves it in the session directory.
 
--   **Manual Waveform Analysis**: For interactive analysis, you can manually open the generated `.raw` data file in the LTSpice waveform viewer to use its powerful tools like cursors, FFTs, and measurements.
+-   **Comprehensive Data Access**: All simulation data is saved in standard `.raw` format, allowing you to use any SPICE-compatible analysis tool of your choice.
 
 -   **Built-in Debugging**: If a simulation fails, you can ask the AI to read the log file and help you understand what went wrong.
 
@@ -75,21 +75,16 @@ Here is an example of the interactive workflow in action.
 > You can open this image file to view the plot of V(out). What would you like to do next?
 
 **You:**
-> Great. Now let me analyze the results myself in LTspice.
+> Great. Can you plot some other signals too?
 
 **AI:**
-> ⚠️ **EXPERIMENTAL FEATURE - Known Issues**
+> Absolutely! Which signals would you like to see? For example, I can plot:
+> - `V(in)` - the input pulse signal  
+> - `V(mid)` - voltage across the capacitor
+> - `I(L1)` - current through the inductor
+> - Or any combination of these signals on the same plot
 >
-> The automatic waveform viewer has compatibility problems with Wine on macOS. It often opens a blank window instead of showing the data.
->
-> **📊 RECOMMENDED ALTERNATIVES:**
-> 1.  Use 'plot specific traces' to generate a PNG plot.
-> 2.  **Manually open LTspice and load the `.raw` file:**
->     -   Go to `File > Open`
->     -   Navigate to: `simulation_output/20250703_150000/`
->     -   Select: `circuit.raw`
->
-> The core simulation functionality works perfectly—only this specific viewer tool is problematic.
+> Just let me know which ones interest you!
 
 ---
 
