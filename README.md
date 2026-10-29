@@ -4,6 +4,8 @@ This project provides a suite of tools that allow an AI assistant, like the one 
 
 This project is designed for engineers, students, and hobbyists who want to speed up their simulation workflow and leverage the power of Large Language Models for circuit design.
 
+This MCP server was merged into the official [Power-Agent/PowerMCP](https://github.com/Power-Agent/PowerMCP) repo.
+
 ![Demo](https://path-to-your/demo.gif)  <!-- Replace with a link to your demo video/gif -->
 
 ---
