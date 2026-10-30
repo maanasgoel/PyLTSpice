@@ -6,8 +6,6 @@ This project is designed for engineers, students, and hobbyists who want to spee
 
 This MCP server was merged into the official [Power-Agent/PowerMCP](https://github.com/Power-Agent/PowerMCP) repo.
 
-![Demo](https://path-to-your/demo.gif)  <!-- Replace with a link to your demo video/gif -->
-
 ---
 
 ## Features In-Depth
